@@ -5,7 +5,9 @@ date:   2019-09-16 16:00:00 +0200
 categories: linux
 ---
 ## Motivation
-My preferred setup is (and was, for the long time) a pulldown terminal I can call with some key binding. Because of this, for some time I was stuck with terminal emulators that support this either out of the box or via plugins. Some of the emulators I used:
+My preferred setup is (and was, for the long time) a pulldown terminal I can call with some key binding. Because of this, for some time I was stuck with terminal emulators that support this either out of the box or via plugins.
+
+Some of the emulators I used:
 * Linux: Tilix or Guake
 * Windows: ConEmu or Cmder
 * MacOS: iTerm2
