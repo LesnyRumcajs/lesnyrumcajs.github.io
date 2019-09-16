@@ -3,9 +3,6 @@ layout: page
 title: About me
 permalink: /about/
 ---
-
-Thanks for visiting webpage!
-
 ## tl;dr
 
 {:refdef: style="text-align: center;"}
