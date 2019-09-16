@@ -1,18 +1,11 @@
 ---
 layout: page
-title: About
+title: About me
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Thanks for visiting webpage!
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I'm a software engineer, currently working at Nexthink (Lausanne, Switzerland). I deal mostly with all matters related to C++ programming though I (almost) never say no to higher (I love Ruby!) or lower level languages. Writing payment terminal application from scratch (if you've been to Poland recently, you probably used it), hardening and upgrading cryptography in existing systems (spent more time with OpenSSL than with any other library) and maintaining existing applications - that's my my professional bread and butter.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+In my free time I enjoy practicing martial arts / sports, running and fantasy books & games. And doing even more programming, especially in Rust.
