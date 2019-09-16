@@ -19,13 +19,13 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Leśny Rumcajs
-email: rumcajs@tuta.io
 description: >- # this means to ignore newlines until "baseurl:"
   My personal blog. Here I will put some knowledge I would like to share
   with the rest of the world and for my memory.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  lesnyrumcajs
+linkedin_username: hubert-bugaj
 
 # Build settings
 theme: minima
