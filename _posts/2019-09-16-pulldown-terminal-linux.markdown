@@ -39,6 +39,7 @@ Terminal=false
 Log-out, log-in.
 ## Result
 <kbd><img src="/assets/pulldown-kitty.png" /></kbd>
+
 Done! A nice kitty terminal available with consistent `ctrl + super + k`. Available anywhere, anytime. No special GNOME plugins for every terminal required. `ctrl + shift + f10` to make it fullscreen.
 
 [kitty]: https://sw.kovidgoyal.net/kitty
