@@ -21,4 +21,4 @@ In my free time I enjoy practicing martial arts / sports, running and **fantasy*
 
 The purpose of this blog is to share some of the knowledge I gained by reading countless other blogs / articles / books. In other words, finally giving back to the bustling community of IT fellows. Plus, it may act as my personal notebook so I know where to look for some commands or configurations in case I forget them.
 
-I intend to keep this blog completely JavaScript / Google Analytics free - I am mostly a C++ developer, I like it light and efficient! No tracking, fast but unfortunately - no comments. If you want to share some opinion with me, correct me or suggest and idea - feel free to hit me up on LinkedIn or email me: ![mail](/assets/mail.png)
+I intend to keep this blog completely JavaScript / Google Analytics free - I am mostly a C++ developer, I like it light and efficient! No tracking, fast but unfortunately - no comments. If you want to share some opinion with me, correct me or suggest an idea - feel free to hit me up on LinkedIn or email me: ![mail](/assets/mail.png)
