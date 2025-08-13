@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Memory analysis in Rust"
-date:   2025-08-12 21:00:00 +0200
+date:   2025-08-13 21:00:00 +0200
 categories: programming
 tags: [rust, memory, debugging]
 math: true
