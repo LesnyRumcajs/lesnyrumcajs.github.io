@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Memory analysis in Rust"
-date:   2025-08-13 21:00:00 +0200
+date:   2025-08-13 19:00:00 +0200
 categories: programming
 tags: [rust, memory, debugging]
 math: true
@@ -328,7 +328,7 @@ Memory analysis in Rust is not as straightforward as in some other languages, e.
 
 [dhat documentation]: https://docs.rs/dhat/latest/dhat/
 [valgrind]: https://valgrind.org/
-[Heaptrack]: github.com/KDE/heaptrack
+[heaptrack]: https://github.com/KDE/heaptrack
 [smaps]: https://man7.org/linux/man-pages/man5/proc_pid_smaps.5.html
 [smaps Ruby wrapper]: https://gist.github.com/LesnyRumcajs/711b5c5c8b0e5439febc6201b0d84b09
 [Tracy Profiler]: https://github.com/wolfpld/tracy
