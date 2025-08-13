@@ -10,7 +10,7 @@ math: true
 > This is not a comprehensive guide to memory analysis in Rust, but rather a collection of tools and techniques I found helpful during a witch-hunt for memory issues in [Forest]. Most tools have documentation, likely dedicated guides and even entire books!
 {: .prompt-info }
 
-## Introduction
+## The problem
 
 ### My Chrome tab is using so much memory!
 
@@ -23,7 +23,7 @@ With all this in mind, it is essential to account for every single gigabyte of m
 
 ### But Rust prevents memory leaks, right?
 
-Yes, Rust prevents memory leaks in the sense that it will not allow you to allocate memory and then forget about it, unless you use [Box::leak](https://doc.rust-lang.org/std/boxed/struct.Box.html#method.leak), [std::mem::forget](https://doc.rust-lang.org/std/mem/fn.forget.html) or depend on faulty crates. However, Rust will not prevent you from creating a data structure and keep appending to it indefinitely, eventually leading to a beautiful OOM. A typical case in a long-running application that performs non-trivial operations is that you have a cache and keep adding to it. If it's unbounded, you _will_ have an OOM, sooner or later. 
+Yes, Rust prevents memory leaks in the sense that it will not allow you to allocate memory and then forget about it, unless you use [Box::leak](https://doc.rust-lang.org/std/boxed/struct.Box.html#method.leak), [std::mem::forget](https://doc.rust-lang.org/std/mem/fn.forget.html) or depend on faulty crates (you might want to use [cargo-geiger]). However, Rust will not prevent you from creating a data structure and keep appending to it indefinitely, eventually leading to a beautiful OOM. A typical case in a long-running application that performs non-trivial operations is that you have a cache and keep adding to it. If it's unbounded, you _will_ have an OOM, sooner or later. 
 
 ## Memory profiling tools
 
@@ -75,7 +75,7 @@ cargo build --profile profiling --features system-alloc # you might need to add 
 
 ### heaptrack
 
-[Heaptrack] - `heaptrack-1.5.0`
+[heaptrack] - `heaptrack-1.5.0`
 
 It's the simplest tool to use. It works by running your program under `heaptrack`, which will record all memory allocations and deallocations, and then you can analyse the results with its interactive viewer. It also supports generating a flamegraph. It used to be my go-to tool for memory analysis, but it has a very high memory overhead, so it might not be suitable if your program is already memory-intensive, like a Filecoin node. In my attempts, it mostly crashed with an OOM error, even with a 64 GiB RAM machine. Sometimes my Fedora would hang, and I had to reboot it:  instant +10 to burnout.
 
@@ -271,6 +271,10 @@ $$ 742,391,808 \text{ B} = 708 \text{ MiB} = 42 \text{ MiB} + 666 \text{ MiB} $$
 
 The math checks out. Oof!
 
+You can also use the [massif-visualizer](https://github.com/KDE/massif-visualizer). It's not as feature-rich as `heaptrack`, but it can be useful for quick analysis.
+
+![massif-visualizer](/assets/img/posts/2025/massif-visualizer.png)
+
 ### Other tools
 
 Other than the tools mentioned above, I got some potential recommendations from the community, but I haven't had a chance to try them (yet):
@@ -306,7 +310,7 @@ Top 10 file-backed memory mappings (by cached memory):
 
 At least in Forest's case, it's not a huge deal because the memory-mapped files are used for caching and are not leaked. The system will reclaim the memory when needed. It is still essential to be aware of this, though, as it can lead to confusion (yes, speaking from experience) when analysing memory usage.
 
-## I don't want to do all this work!
+## Avoiding memory issues
 
 Memory analysis aside, having all persistent collections bound is a good idea so that you could skip the analysis altogether. Some suggestions based on the memory analysis done in Forest:
 - Use an [lru] (https://en.wikipedia.org/wiki/cache_replacement_policies#lru) or its variants for caching. Don't implement them yourself; use battle-tested libraries like [lru](https://crates.io/crates/lru) or [cached](https://crates.io/crates/cached).
@@ -333,3 +337,4 @@ Memory analysis in Rust is not as straightforward as in some other languages, e.
 [Forest]: https://github.com/ChainSafe/forest/
 [Lotus]: https://github.com/filecoin-project/lotus
 [gperftools]: https://github.com/gperftools/gperftools
+[cargo-geiger]: https://github.com/geiger-rs/cargo-geiger
