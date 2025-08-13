@@ -313,7 +313,7 @@ At least in Forest's case, it's not a huge deal because the memory-mapped files 
 ## Avoiding memory issues
 
 Memory analysis aside, having all persistent collections bound is a good idea so that you could skip the analysis altogether. Some suggestions based on the memory analysis done in Forest:
-- Use an [lru] (https://en.wikipedia.org/wiki/cache_replacement_policies#lru) or its variants for caching. Don't implement them yourself; use battle-tested libraries like [lru](https://crates.io/crates/lru) or [cached](https://crates.io/crates/cached).
+- Use an [lru](https://en.wikipedia.org/wiki/cache_replacement_policies#lru) or its variants for caching. Don't implement them yourself; use battle-tested libraries like [lru](https://crates.io/crates/lru) or [cached](https://crates.io/crates/cached).
 - Monitor the size and length of your caches, e.g., via Prometheus metrics. Calculating the total size of a data structure can be tricky, but some libraries can help, such as [get-size2](https://crates.io/crates/get-size2). This will require some manual annotation, but it is worth it.
 - Don't use unbounded channels, like [flume::unbounded](https://docs.rs/flume/latest/flume/fn.unbounded.html), unless you are confident they won't grow indefinitely. Ban their usage in your codebase with [clippy's disallowed-methods](https://doc.rust-lang.org/clippy/lint_configuration.html#disallowed-methods).
 - Use reference-counted types like `Arc` or `Rc` to limit the number of copies of the data you have in memory.
