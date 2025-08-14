@@ -23,7 +23,7 @@ With all this in mind, it is essential to account for every single gigabyte of m
 
 ### But Rust prevents memory leaks, right?
 
-Yes, Rust prevents memory leaks in the sense that it will not allow you to allocate memory and then forget about it, unless you use [Box::leak](https://doc.rust-lang.org/std/boxed/struct.Box.html#method.leak), [std::mem::forget](https://doc.rust-lang.org/std/mem/fn.forget.html) or depend on faulty crates (you might want to use [cargo-geiger]). However, Rust will not prevent you from creating a data structure and keep appending to it indefinitely, eventually leading to a beautiful OOM. A typical case in a long-running application that performs non-trivial operations is that you have a cache and keep adding to it. If it's unbounded, you _will_ have an OOM, sooner or later. 
+Yes, Rust prevents memory leaks in the sense that it will not allow you to allocate memory and then forget about it, unless you use [Box::leak](https://doc.rust-lang.org/std/boxed/struct.Box.html#method.leak), [std::mem::forget](https://doc.rust-lang.org/std/mem/fn.forget.html) or depend on faulty crates. For the latter, you might want to use [cargo-geiger]. However, Rust will not prevent you from creating a data structure and keep appending to it indefinitely, eventually leading to a beautiful OOM. A typical case in a long-running application that performs non-trivial operations is that you have a cache and keep adding to it. If it's unbounded, you _will_ have an OOM, sooner or later. 
 
 ## Memory profiling tools
 
@@ -280,6 +280,7 @@ You can also use the [massif-visualizer](https://github.com/KDE/massif-visualize
 Other than the tools mentioned above, I got some potential recommendations from the community, but I haven't had a chance to try them (yet):
 - [bytehound](https://github.com/koute/bytehound) - some legwork needed to set it up, as it requires a specific, old version of `mimalloc` library on the host for compilation. It looks promising, though it hasn't received any updates since 2023. According to the author, it is _finished_.
 - [Tracy Profiler] + [Tracing-Tracy] - supposedly great combo for profiling asynchronous `tokio` code annotated with tracing spans.
+- [eBPF] - this was recommended several times on the [Reddit post](https://www.reddit.com/r/rust/comments/1mpezl0/memory_analysis_in_rust/) as the _modern way_, with tooling like [OTEL eBPF], [Aya], [bpftrace] (_easy but limited_) and [bcc] (_powerful but more painful_). I haven't tried it, but it looks like a powerful toolbox for profiling. The fact that there's even a [ePBF book] about it makes it pretty daunting!
 
 
 ## Hic Sunt Dracones
@@ -338,3 +339,9 @@ Memory analysis in Rust is not as straightforward as in some other languages, e.
 [Lotus]: https://github.com/filecoin-project/lotus
 [gperftools]: https://github.com/gperftools/gperftools
 [cargo-geiger]: https://github.com/geiger-rs/cargo-geiger
+[eBPF]: https://ebpf.io/
+[OTEL eBPF]: https://github.com/open-telemetry/opentelemetry-ebpf-profiler
+[Aya]: https://aya-rs.dev/
+[bcc]: https://github.com/iovisor/bcc
+[bpftrace]: https://github.com/bpftrace/bpftrace
+[ePBF book]: https://isovalent.com/books/learning-ebpf/
