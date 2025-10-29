@@ -18,7 +18,9 @@ I recently completed the Everest Base Camp (EBC) trek in Nepal, one of the most 
 
 I booked the trek through a local agency in Kathmandu. You can see the details of the package on their [website](https://www.nepalhikingteam.com/package/everest-base-camp-heli-shuttle-trek). The package included all the necessary permits, accommodation in teahouses along the route, meals, a guide, and a porter. 
 
-My original trek was a round-trip from Lukla to EBC via the Cho La Pass. Still, due to the heavy snowfall during my trek, we had to skip the pass and return via the same route (which I didn't want to repeat, so I took a helicopter back from Gorak Shep to Lukla). Because the original plan didn't have other clients, I ended up having a private guide and porter for the entire trek, which was a nice bonus. Still, we joined another group for the entire trek to EBC itself (which ended up being the whole trek for me as well).
+My original trek was a round-trip from Lukla to EBC via the Cho La Pass. Still, due to the heavy snowfall during my trek, we had to skip the pass and return via the same route (which I didn't want to repeat, so I took a helicopter back from Gorak Shep to Lukla). Luckily, I got a refund for this segment.
+
+Because the original plan didn't have other clients, I ended up having a private guide and porter for the entire trek, which was a nice bonus. Still, we joined another group for the entire trek to EBC itself (which ended up being the whole trek for me as well).
 
 The rough plan was outlined by the agency (map from the Nepal Hiking Team website)
 
@@ -164,10 +166,6 @@ There are a couple of things to watch out for during the trek, I either read abo
 - Altitude sickness - as mentioned below, be aware of the symptoms of altitude sickness and take necessary precautions. Apparently, garlic soup helps!
 - Sunburn - the sun's rays are stronger at higher altitudes, so make sure to apply sunscreen regularly and wear a hat and sunglasses. A LOT OF SUNSCREEN, especially on the nose. (that's the part I figured out the hard way)
 - Cold - temperatures can drop significantly at night, especially at higher elevations. Bring warm, comfortable clothing and a decent down sleeping bag. My guide also suggested wearing a woolen hat to bed to keep warm (the head sometimes slips out of the sleeping bag).
-
-### The bad
-
-Unfortunately, I did not receive a refund for the cancelled Cho La pass portion of the trek. The agency said the guesthouses had already been booked and paid for, so they couldn't refund me. I understand their point, but it would have been nice to receive at least a partial refund for the unused portion of the trek. I also had to pay for the helicopter ride back to Lukla out of my own pocket, which was quite expensive (around $950).
 
 ### Necessary preparations
 
