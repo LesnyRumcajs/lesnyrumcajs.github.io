@@ -1,2 +1,9 @@
+[tasks.serve]
+description = "Serve the site locally."
+run = '''
+bundle install
+bundle exec jekyll serve --livereload
+'''
+
 [tools]
 ruby = "3.3"
