@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Rust materials: books, channels, podcasts and more"
-date:   2026-04-02 18:00:00 +0100
+date:   2026-04-03 08:00:00 +0100
 categories: programming
 tags: [rust]
 ---
